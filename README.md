@@ -2,6 +2,13 @@
 
 A full-stack application for managing apartment listings with search capabilities and full CRUD operations.
 
+## Documentation
+
+- [API Documentation](docs/API.md)
+- [Database Documentation](docs/DATABASE.md)
+- [Deployment Guide](docs/DEPLOYMENT.md)
+- [Frontend Documentation](docs/FRONTEND.md)
+
 ## Project Structure
 
 ```
@@ -14,6 +21,7 @@ nawy/
 ## Tech Stack
 
 ### Backend (nawy-backend)
+
 - NestJS
 - TypeORM
 - PostgreSQL
@@ -21,6 +29,7 @@ nawy/
 - Docker
 
 ### Frontend (nawy-web)
+
 - Next.js 15.5
 - TypeScript
 - Tailwind CSS
@@ -39,23 +48,27 @@ nawy/
 ## Getting Started
 
 ### Prerequisites
+
 - Docker and Docker Compose
 - Node.js (for local development)
 
 ### Running with Docker
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Muhammad-Gamal98/Nawy-Assignment.git
 cd Nawy-Assignment
 ```
 
 2. Start the application:
+
 ```bash
 docker-compose up --build
 ```
 
 This will start:
+
 - PostgreSQL database on port 5432
 - Backend service on port 8000
 - Frontend service on port 3000
@@ -63,6 +76,7 @@ This will start:
 ### API Endpoints
 
 #### Apartments
+
 - `GET /apartment` - List all apartments (with pagination)
 - `GET /apartment/:id` - Get specific apartment details
 - `GET /apartment/search` - Search apartments
@@ -74,6 +88,7 @@ This will start:
 ### Environment Variables
 
 #### Backend (.env)
+
 ```env
 DBHOST=db
 DBPORT=5432
@@ -83,6 +98,7 @@ DBNAME=nawey
 ```
 
 #### Frontend (.env)
+
 ```env
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 ```
@@ -90,6 +106,7 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 ## Database Schema
 
 ### Apartment Entity
+
 - id: number
 - unitName: string
 - unitNumber: number
@@ -102,11 +119,13 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 ## Features in Detail
 
 ### Full-text Search
+
 - Implemented using PostgreSQL's tsvector
 - Searches across unit name, unit number, and project fields
 - Automatically updates search vectors on insert/update
 
 ### Frontend Features
+
 - Responsive design for all screen sizes
 - Real-time search functionality
 - Image preview for apartments
@@ -115,6 +134,7 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 - Loading states and error handling
 
 ### Backend Features
+
 - RESTful API architecture
 - Database migrations for version control
 - Environment configuration
@@ -126,6 +146,7 @@ NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 ### Local Development Setup
 
 1. Backend:
+
 ```bash
 cd nawy-backend
 npm install
@@ -133,6 +154,7 @@ npm run start:dev
 ```
 
 2. Frontend:
+
 ```bash
 cd nawy-web
 npm install
@@ -140,6 +162,7 @@ npm run dev
 ```
 
 ### Database Migrations
+
 ```bash
 # Run migrations
 npm run typeorm -- migration:run -d src/data-source.ts
