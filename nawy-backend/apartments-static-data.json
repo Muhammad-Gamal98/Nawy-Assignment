@@ -1,0 +1,142 @@
+[
+  {
+    "unitName": "Sky View",
+    "unitNumber": 101,
+    "project": "Palm Hills",
+    "description": "Modern 2-bedroom apartment with city view.",
+    "price": 1500000
+  },
+  {
+    "unitName": "Sky View",
+    "unitNumber": 102,
+    "project": "Palm Hills",
+    "description": "Spacious 3-bedroom apartment with balcony.",
+    "price": 1850000
+  },
+  {
+    "unitName": "Cairo Heights",
+    "unitNumber": 201,
+    "project": "New Cairo",
+    "description": "Luxury apartment with garden access.",
+    "price": 2100000
+  },
+  {
+    "unitName": "Cairo Heights",
+    "unitNumber": 202,
+    "project": "New Cairo",
+    "description": "Fully furnished 2-bedroom apartment.",
+    "price": 1700000
+  },
+  {
+    "unitName": "Palm Gardens",
+    "unitNumber": 301,
+    "project": "6th October",
+    "description": "Family apartment with 3 bedrooms and 2 bathrooms.",
+    "price": 1400000
+  },
+  {
+    "unitName": "Palm Gardens",
+    "unitNumber": 302,
+    "project": "6th October",
+    "description": "Compact 1-bedroom apartment ideal for singles.",
+    "price": 950000
+  },
+  {
+    "unitName": "Skyline Towers",
+    "unitNumber": 401,
+    "project": "Nasr City",
+    "description": "Luxury penthouse with panoramic skyline views.",
+    "price": 3500000
+  },
+  {
+    "unitName": "Skyline Towers",
+    "unitNumber": 402,
+    "project": "Nasr City",
+    "description": "2-bedroom apartment with modern kitchen.",
+    "price": 1650000
+  },
+  {
+    "unitName": "Sunny Villas",
+    "unitNumber": 501,
+    "project": "Sheikh Zayed",
+    "description": "Apartment with private garden and parking.",
+    "price": 2400000
+  },
+  {
+    "unitName": "Sunny Villas",
+    "unitNumber": 502,
+    "project": "Sheikh Zayed",
+    "description": "Cozy 2-bedroom apartment with large terrace.",
+    "price": 1750000
+  },
+  {
+    "unitName": "River Walk",
+    "unitNumber": 601,
+    "project": "Maadi",
+    "description": "Apartment overlooking the Nile river.",
+    "price": 3200000
+  },
+  {
+    "unitName": "River Walk",
+    "unitNumber": 602,
+    "project": "Maadi",
+    "description": "3-bedroom luxury apartment with parking.",
+    "price": 2800000
+  },
+  {
+    "unitName": "Green Valley",
+    "unitNumber": 701,
+    "project": "Obour City",
+    "description": "Affordable 2-bedroom apartment with green view.",
+    "price": 1200000
+  },
+  {
+    "unitName": "Green Valley",
+    "unitNumber": 702,
+    "project": "Obour City",
+    "description": "Family-sized apartment with 4 bedrooms.",
+    "price": 2000000
+  },
+  {
+    "unitName": "Sunrise Residence",
+    "unitNumber": 801,
+    "project": "New Capital",
+    "description": "Luxury apartment with rooftop pool access.",
+    "price": 4000000
+  },
+  {
+    "unitName": "Sunrise Residence",
+    "unitNumber": 802,
+    "project": "New Capital",
+    "description": "Stylish 1-bedroom apartment with smart home system.",
+    "price": 1300000
+  },
+  {
+    "unitName": "Palm Hills",
+    "unitNumber": 901,
+    "project": "Palm Hills",
+    "description": "Modern apartment in Palm Hills community.",
+    "price": 2200000
+  },
+  {
+    "unitName": "Palm Hills",
+    "unitNumber": 902,
+    "project": "Palm Hills",
+    "description": "Luxury 2-bedroom apartment with pool view.",
+    "price": 2500000
+  },
+  {
+    "unitName": "City Stars",
+    "unitNumber": 1001,
+    "project": "Heliopolis",
+    "description": "Apartment connected to City Stars Mall.",
+    "price": 3100000
+  },
+  {
+    "unitName": "City Stars",
+    "unitNumber": 1002,
+    "project": "Heliopolis",
+    "description": "Luxury apartment with private gym access.",
+    "price": 3600000
+  }
+]

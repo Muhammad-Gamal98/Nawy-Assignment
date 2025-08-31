@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    volumes:
+      - data:/var/lib/postgresql/data
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "secret"
+      POSTGRES_DB: "nawey"
+  backend:
+    build: ./nawy-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DBHOST=db
+      - DBPORT=5432
+      - DBUSERNAME=postgres
+      - POSTGRES_PASSWORD=secret
+      - DBNAME=nawey
+    depends_on:
+      - db
+    restart: unless-stopped
+  frontend:
+    build: ./nawy-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=http://backend:8000
+    depends_on:
+      - backend
+volumes:
+  data:
