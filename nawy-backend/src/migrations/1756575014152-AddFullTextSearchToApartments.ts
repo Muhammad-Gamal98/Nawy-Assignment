@@ -7,7 +7,7 @@ export class AddFullTextSearchToApartments1710000000000
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(`
-      ALTER TABLE apartment ADD COLUMN search_vector tsvector;
+      ALTER TABLE apartment ADD COLUMN IF NOT EXISTS search_vector tsvector;
     `);
 
     await queryRunner.query(`
@@ -49,6 +49,6 @@ export class AddFullTextSearchToApartments1710000000000
       `DROP FUNCTION IF EXISTS apartment_tsvector_update;`,
     );
     await queryRunner.query(`DROP INDEX IF EXISTS idx_apartment_search;`);
-    await queryRunner.query(`ALTER TABLE apartment DROP COLUMN search_vector;`);
+    await queryRunner.query(`ALTER TABLE apartment DROP COLUMN IF EXISTS search_vector;`);
   }
 }

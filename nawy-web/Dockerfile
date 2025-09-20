@@ -1,35 +1,22 @@
-# Build stage
-FROM node:21-alpine AS builder
+FROM node:21-alpine
+
+# Set working directory
 WORKDIR /app
+
+# Copy package.json and package-lock.json to work directory
+COPY package*.json ./
 
 # Install dependencies
-COPY package*.json ./
-RUN npm ci
+RUN npm install
 
-# Copy source code
+# Copy the rest of the application code to work directory
 COPY . .
 
-# Build application with standalone output
+# Build the Next.js application
 RUN npm run build
 
-# Production stage
-FROM node:21-alpine AS runner
-WORKDIR /app
-
-# Don't run production as root
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-USER nextjs
-
-# Copy only necessary files
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-# Expose port
+# Expose the port Next.js is running on
 EXPOSE 3000
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
 
-# Start the application
-CMD ["node", "server.js"]
+# Run the Next.js application
+CMD ["node", ".next/standalone/server.js"]
