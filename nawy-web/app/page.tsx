@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 
 interface PageProps {
-  searchParams: Record<string, string | string[] | undefined>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }
 
 export default async function Page({ searchParams }: PageProps) {

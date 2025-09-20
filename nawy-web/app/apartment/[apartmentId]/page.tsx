@@ -14,13 +14,13 @@ interface Apartment {
 }
 
 interface ApartmentDetailProps {
-  params: { apartmentId: string };
+  params: Promise<{ apartmentId: string }>;
 }
 
 export default async function ApartmentDetail({
   params,
 }: ApartmentDetailProps) {
-  const { apartmentId } = params;
+  const { apartmentId } = await params;
   const res = await fetch(`${BACKENDHOSTURL}/apartment/${apartmentId}`);
 
   if (!res.ok) {
